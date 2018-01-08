@@ -1,0 +1,40 @@
+<ion-view view-title="Dr.ED" name="home-view" class="home-background">
+  <ion-content scroll="false" style="background-image: url('img/profile-bg.jpg');; background-size: cover;">
+    <form name="myForm">
+    <div class="card">
+      <div class="item item-text-wrap">
+        Settings for Parameter
+      </div>
+      <div class="item item-divider">
+
+        <label class="item item-input">
+          <span class="input-label">Max Abnormal PH :</span>
+          <input name="PHcount" id="PHcount" type="text" ng-model="data.ph_parameter" ng-click ="data.ph_parameter = null">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Max Abnormal Glucose :</span>
+          <input name="Glucosecount" id="Glucosecount" type="text" ng-model="data.glucose_parameter" ng-click="data.glucose_parameter = null">
+        </label>
+
+        <button class="button button-block buttonall ion-checkmark"  ng-click="upload()">Save</button>
+        <p>
+          {{$scope.error}}
+        </p>
+      </div>
+      <ion-card>
+        <ion-card-header>
+          <div class="item item-text-wrap">
+            <b>Note</b>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="item item-text-wrap">
+            For the Max Abnormal that you input will be the number of maximum number of days that are abnormal
+            to give you a prompt to request an appointment.
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </form>
+  </ion-content>
+</ion-view>

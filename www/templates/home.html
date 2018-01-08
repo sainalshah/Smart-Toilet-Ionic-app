@@ -1,0 +1,55 @@
+<ion-view view-title="Login" hide-nav-bar="true" >
+  <ion-content scroll="false" class= "login"  style="background: url(img/login.jpg) center; background-size: cover;">
+
+    <div class="hero no-header flat">
+      <div class="content">
+        <div class="app-icon"></div>
+        <h1>E-Toilet</h1>
+      </div>
+    </div>
+    <form name="myForm"  >
+      <div class="card">
+        <div class="item item-text-wrap">
+          Login
+        </div>
+        <div class="item item-divider">
+          <div class="list">
+
+            <!--
+            <!-- <label class="item item-input"  ng-class="{ 'has-errors' : myForm.email.$invalid && !myForm.email.$pristine , 'no-errors' : myForm.email.$valid && myForm.email.$pristine }">
+            <span class="input-label">Email Address :</span>
+            <input type="email" name="email" ng-model="data.emailaddress" required>
+          </label>
+          <p  class="warning" ng-show="myForm.email.$error.required">* Email is required</p>
+          <p class="warning" ng-show="myForm.email.$invalid && !myForm.email.$pristine">* Please type in a correct email address</p> -->
+
+
+          <label class="item item-input" ng-class="{ 'has-errors' :submitted && myForm.username.$invalid && !myForm.username.$pristine , 'no-errors' : myForm.username.$valid && myForm.user.$pristine }">
+            <span class="input-label">Username :</span>
+            <input type="email" name="username"  highlight-color="balanced" ng-model="data.username" placeholder= "someone@example.com" required>
+          </label>
+
+          <p class="warning" ng-show="submitted && myForm.username.$error.required">* Username is required</p>
+          <p class="warning" ng-show="submitted && myForm.username.$invalid && !myForm.username.$pristine">* User ID should look like an email address,</p>
+
+
+          <label class="item item-input" ng-class="{ 'has-errors' :submitted && myForm.password.$invalid && myForm.$submitted, 'no-errors' : myForm.password.$valid  && myForm.$submitted}">
+            <span class="input-label">Password : </span>
+            <input type="password" name="password" ng-model="data.password" ng-minlength="5" ng-maxlength="20" required>
+          </label>
+          <p  class="warning" ng-show="submitted &&myForm.password.$error.required">* Password is required</p>
+          <p class="warning" ng-show="submitted &&myForm.password.$error.minlength">* Password must be longer than 6 characters</p>
+          <p  class="warning">
+            {{msg}}</p>
+
+        </div>
+        <button class="button button-full button-assertive ink" ng-click="submitted=true ; login()" >Login</button>
+        <p class="serif">  Or click here to register !</p>
+        <button class="button button-full button-assertive ink" ui-sref="app.register">Register</button>
+      </div>
+
+    </div>
+  </form>
+
+</ion-content>
+</ion-view>

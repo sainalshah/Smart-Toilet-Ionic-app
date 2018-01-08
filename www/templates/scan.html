@@ -1,0 +1,40 @@
+<ion-view view-title="Dr.ED" name="home-view" class="home-background">
+  <ion-content scroll="false" style="background-image: url('img/profile-bg.jpg');; background-size: cover;">
+    <div class="connected">
+    <ul class="list">
+    <li class="item item-toggle">
+      <div >
+        <p class="spinner-text" style="margin:2px 97px;    margin-right: 90px;">{{status}}<!--<ion-spinner icon="lines" class="spinner-calm" style="margin:-20px 150px;  margin-left:10px;"></ion-spinner>--></p>
+      </div>
+    </li>
+    </ul>
+    </div>
+    <!-- <ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner>
+        <ion-spinner icon="ripple"></ion-spinner> -->
+    <!-- <h1>{{status}}</h1> -->
+    <div class="card">
+      <div class="item item-text-wrap">
+        Scan Data
+      </div>
+        <div class="item item-divider">
+        <label class="item item-input">
+          <span class="input-label">Glucose :</span>
+          <div ng-style="(par1==true && {'background-color':'green'}) ||(par1==false && {'background-color':'red'}) " > {{par1condition}}</div>
+
+
+        </label>
+        <label class="item item-input">
+
+          <span class="input-label">PH Level :</span>
+          <div ng-style="(par2==true && {'background-color':'green'}) ||(par2==false && {'background-color':'red'}) " > {{par2condition}}</div>
+        </label>
+        <div >
+           {{reminder}}
+           {{result}}
+        </div>
+      <button class="button button-block buttonall ion-checkmark"  ng-click="scan()"  ng-disabled="!isReadyToScan">Scan Disease</button>
+    </div>
+    <div>
+
+  </ion-content>
+</ion-view>

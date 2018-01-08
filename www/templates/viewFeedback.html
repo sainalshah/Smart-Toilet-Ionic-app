@@ -1,0 +1,21 @@
+<ion-view view-title="Doctors Feedback">
+  <ion-content  style="background: url(img/profile.png) center; background-size: cover;">
+
+    <div ng-repeat="e in data" class="card">
+      <div class="item item-avatar item-text-wrap"  style="background-color:Gainsboro;height:auto;" >
+<div style="width:6px;height:8px;">
+        <i class="icon ion-clipboard" style=" font-size: 50px ;  margin: -55px;"></i>
+      </div>
+      <strong>pH Indicator: {{e.ph_indicator}}<br/></strong>
+      <strong>glucose Indicator: {{e.glucose_indicator}}<br/></strong>
+      <strong>{{e.comment}}</strong>
+        <div class="card-footer text-right">
+          <div class="pull-left">
+            <i class="icon ion-clock">&nbsp&nbsp{{e.comment_date}}</i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,61 @@
+
+<ion-modal-view >
+  <ion-header-bar>
+    <h1 class="title">Book Appointment</h1>
+    <div class="buttons">
+      <button style="color:Red	" class="button button-clear" ng-click="closeBookAppointment()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content style="background: url(img/login.jpg) center; background-size: cover;">
+
+    <form name="myForm"  >
+      <div class="card">
+        <div class="item item-text-wrap">
+          Book Appointment
+        </div>
+        <div class="row">
+
+          <label class="item item-input item-select"  ng-class="{ 'has-errors' :submitted && myForm.singleSelect.$invalid, 'no-errors' : myForm.singleSelect.$valid}">
+            <span class="input-label">Clinic : </span>
+            <select name="singleSelect" id="singleSelect" ng-model="data.clinic_id" ng-options="item.clinic_id as item.clinic_name for item in clinics" required>
+              <!-- <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option> -->
+            </select>
+
+            <a style="float:right;" href="" ng-click="showMap()">Show map</a>
+
+          </label>
+          <p  class="warning" ng-show="submitted && myForm.singleSelect.$error.required">* Please Choose your Clinic</p>
+
+        </div>
+
+        <div class="row">
+          <label class="item item-input" ng-class="{ 'has-errors' : submitted &&myForm.datetime.$invalid , 'no-errors' : myForm.datetime.$valid }">
+            <span class="input-label">Appointment Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <i class="icon md-arrow-dropdown"></i></span>
+              <ion-icon name="md-arrow-dropdown"></ion-icon>
+              <input style="float:right;" type="date" name="datetime" ng-model="data.appointment_date"  required>
+            </label>
+
+            <p  class="warning" ng-show="submitted && myForm.datetime.$error.required">* Date is required</p>
+          </div>
+
+          <div class="row">
+            <label class="item item-input item-select" ng-class="{ 'has-errors' : submitted &&myForm.TimeSelect.$invalid , 'no-errors' : myForm.TimeSelect.$valid }">
+              <span class="input-label">Appointment Time:</span>
+              <select name="TimeSelect" id="TimeSelect" ng-model="data.time_of_day_id" required>
+                <option value=1>Morning</option> <!-- interpolation -->
+                <option value=2>Afternoon</option>
+                <option value=3>Night</option>
+              </select>
+            </label>
+            <p  class="warning" ng-show="submitted && myForm.TimeSelect.$error.required">* Time is required</p>
+          </div>
+          <button class="button button-full button-assertive ink"  ng-click="submitted=true ; requestAppointment()">Book Appointment </button>
+          <p  class="warning" >{{msg}}</p>
+          <p  class="warning" >* Clinic will arrange the appoinment time </p>
+        </div>
+      </form>
+    </ion-content>
+  </ion-modal-view>

@@ -1,0 +1,181 @@
+
+/* Empty. Add your own CSS if you like */
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+     font-size: 19px
+     ;
+     color : FireBrick;
+     text-align: center;
+}
+
+p.warning {
+
+     color : red;
+}
+.login-background {
+    background-image: url('../img/care.png');
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 700px;
+
+}
+
+/*.home-background{
+    background-image: url('../img/home2.png');
+    background-size: 250px 250px;
+    width: 100%;
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: GhostWhite;
+    }*/
+
+
+h1{
+  color: #fff;
+  height: 50px;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin:  auto ;
+}
+
+.h4{
+  height: 50px;
+  width: 375px;
+  display: flex;
+  text-align: center;
+  vertical-align:bottom;
+
+
+
+}
+
+.admin{
+    width: 100%;s
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: SlateGrey ;
+    }
+
+.scanbutton{
+
+
+  margin:10px 35px;
+height : 10px;
+  width:300px;
+
+    background-color:LightSkyBlue ;
+  padding: 5px 10px;
+    font-size: 15px;
+
+
+}
+
+
+.button1 {width: 175px;
+  height : 60px;
+   bottom: -260px;
+      background-color:LightSkyBlue ;
+}
+.button2 {width: 50%;
+ bottom: -260px;
+   height : 60px;
+   background-color:LightSkyBlue ;}
+
+.buttonall{background-color:LightSkyBlue ;
+
+}
+
+
+.scan{
+  margin:10px 35px;
+height : 10px;
+  width:300px;
+
+    background-color:LightSkyBlue ;
+  padding: 5px 10px;
+    font-size: 15px;
+  border-radius: 60%;
+
+}
+
+.app-icon {
+    background-color: #fff;
+    background: url('../img/logo.png') center;
+    background-size: cover;
+    border-radius: 0%;
+
+    height: 125px;
+    margin:  15px 125px ;
+    width: 125px;
+
+}
+
+.social-login {
+    position: fixed;
+    bottom: 0;
+}
+
+.badge-notify {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background: #19b608;
+  border: 2px solid white; }
+
+.badge-notify {
+      position: absolute;
+      margin-left:100px;
+      top: 14px; }
+
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+.spinner-text {
+
+  text-align: right;
+}
+.spinner svg {
+  position:absolute;
+  width: 5% !important;
+  height: 47% !important;
+}
+
+.badge {
+  position: absolute;
+
+      border: 4px solid white;
+      padding: 10px 12px;
+      border-radius: 30%;
+      color: white;
+      font-weight: bold;
+
+      top: 64px;
+        margin:-5px 120px;
+}
+.bad  {
+      margin:-5px 96px;
+      background: red ;
+  }
+
+.good {
+
+    background: green;
+}
+
+table{
+  margin:auto;
+  width: 90%;
+}
+th, td {
+    border: 2px  black;border-style:solid ;
+}
+
+.filter{background-color:LightSkyBlue ;width: 100%
+
+}

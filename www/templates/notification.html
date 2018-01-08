@@ -1,0 +1,22 @@
+<ion-view view-title="Notification">
+  <ion-content  style="background: url(img/lol1.png) center; background-size: cover;">
+    <strong style="auto">{{nonoti}}</strong>
+
+    <div ng-repeat="e in patients " class="card"  style="width: 21rem ;height:110px;">
+      <div class="item item-avatar item-text-wrap"  style="background-color:Gainsboro;height:110px;" >
+<div style="width:6px;height:8px;">
+        <i class="icon ion-android-notifications" style=" font-size: 50px ;  margin: -55px;"></i>
+      </div>
+      <strong style="margin:90px 1px;">{{e.type_description}}</strong>
+      <strong ngshow="e.appointment_date!=null" >Appointment Date:{{e.appointment_date}}</strong>
+        <strong ngshow="e.appointment_time!=null" >Appointment Time:{{e.appointment_time}}</strong>
+        <div class="card-footer text-right">
+          <div class="pull-left">
+            <i class="icon ion-clock" style="margin: 3px 8px;font-size:13px;" >{{e.time}}</i>  &nbsp&nbsp&nbsp
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,58 @@
+<ion-view view-title="History">
+  <ion-content scroll="false" style="background-image: url('img/profile-bg.jpg');; background-size: cover;">
+
+    <div class=" slide-up" >
+      <div class="content">
+        <h3 style="text-align:center;  font-size:35px;"><a class="light" >Filter </a></h3>
+
+
+
+        <div class="card">
+          <div class="card chart-card">
+            <div class="item item-text-wrap">
+              <canvas id="line" class="chart chart-line" data="lineData" labels="lineLabels" legend="true" series="lineSeries" options="{showTooltips: false}"></canvas>
+            </div>
+          </div>
+
+          <table>
+
+            <tr>
+              <td>  <button class="button filter" ng-click="filter(0)" >Today</button></td>
+              <td>    <a class="button filter " ng-click="filter(1)" >This Week</a>
+              </td>
+            </tr>
+            <tr>
+              <td>  <a class="button filter" ng-click="filter(2)" >This Month</a></td>
+              <td>  <a class="button filter" ng-click="filter(3)" >Last 3 Months</a></td>
+            </tr>
+          </table>
+
+
+              <label class="item-input">
+                <span class="input-label">Choose Date:</span>
+                      </label>
+                      <table><tr>
+                      <td>    <span class="input-label">From :</span>
+                <input type="date" ng-model="data.date1"></td>
+
+                <td>    <span class="input-label">To :</span>
+                        <input type="date" ng-model="data.date2"></td>
+                      </tr>
+                      <table>
+
+          <!-- <div class="button-bar">
+          <a class="button buttonall" ng-click="filter(0)" >Today</a>
+          <a class="button buttonall" ng-click="filter(1)" >This Week</a>
+
+        </div>
+        <div class="button-bar">
+        <a class="button buttonall" ng-click="filter(2)" >This Month</a>
+        <a class="button buttonall" ng-click="filter(3)" >Last 3 Months</a>
+      </div>
+    </div>
+  </div> -->
+
+</div>
+
+</ion-content>
+</ion-view>
