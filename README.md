@@ -4,6 +4,7 @@ Smart Toilet was a project to help users with detecting lifestyle diseases such 
 The smart toilet app could initiate a NIR urine scan, analyze the result, and show the abnormality of glucose and urine pH level. The result would be uploaded to the AWS backend. The app can be used to get appointments with clinics. It also notifies user of important events.
 
 ![menu](https://github.com/sainalshah/Smart-Toilet-Ionic-app/blob/master/docs/menu.png)
+![location prompt](https://github.com/sainalshah/Smart-Toilet-Ionic-app/blob/master/docs/prompt.png)
 ![history](https://github.com/sainalshah/Smart-Toilet-Ionic-app/blob/master/docs/history.png)
 ![book appoinment](https://github.com/sainalshah/Smart-Toilet-Ionic-app/blob/master/docs/book.png)
 ![notifications](https://github.com/sainalshah/Smart-Toilet-Ionic-app/blob/master/docs/notifications.png)
